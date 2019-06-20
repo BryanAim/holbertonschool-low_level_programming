@@ -17,8 +17,10 @@ int main(void)
 		{
 			for (z = 0 ; z <= 9; z++)
 			{
-				for (a = 1; a <= 9; a++)
+				for (a = 0; a <= 9; a++)
 				{
+					if (!(a == 0 && y == 0 && z == 0 && a == 0))
+					{
 					putchar(x + '0');
 					putchar(y + '0');
 					putchar(' ');
@@ -28,6 +30,7 @@ int main(void)
 					{
 					putchar(',');
 					putchar(' ');
+					}
 					}
 				}
 			}
