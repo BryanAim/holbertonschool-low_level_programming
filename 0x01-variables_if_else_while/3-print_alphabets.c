@@ -1,0 +1,20 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char az;
+	char AZ;
+
+	for (az = 'a' ; az <= 'z' ; az++)
+	{
+		for (AZ = 'A' ; AZ <= 'Z' ; AZ++)
+	}
+	putchar(az);
+	putchar(AZ);
+	putchar('\n');
+	return (0);
+}
