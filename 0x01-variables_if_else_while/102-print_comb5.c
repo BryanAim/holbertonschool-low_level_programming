@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -10,28 +11,30 @@ int main(void)
 	int y;
 	int a;
 	int b;
-	int z:
+	int z;
 
 	for (x = 0 ; x <= 9 ; x++)
 	{
 		for (y = 0 ; y <= 9 ; y++)
 		{
-			for (x = a ; a <= 9; a++)
+			for (a = x ; a <= 9; a++)
 			{
-				if ( x == a)
+				if ( a == x)
 				{
-					(z = y + 1) 
+					z = y + 1;
+				}
 				else 
 				{
-					(a == '0')
-				for (; z <= 9; a++)
+					z = '0';
+				}
+				for (b = z; b <= 9; b++)
 				{
 						putchar(x + '0');
 						putchar(y + '0');
 						putchar(' ');
-						putchar(z + '0');
 						putchar(a + '0');
-						if (!(x == 9 && y == 8 && z == 9 && a == 9))
+						putchar(b + '0');
+						if (!(x == 9 && y == 8 && a == 9 && b == 9))
 						{
 						putchar(',');
 						putchar(' ');
@@ -40,8 +43,6 @@ int main(void)
 					}
 				}
 			}
-		}
-	}
 	putchar('\n');
 	return (0);
 }
