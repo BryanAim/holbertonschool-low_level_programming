@@ -19,30 +19,30 @@ int main(void)
 		{
 			for (a = x ; a <= 9; a++)
 			{
-				if ( a == x)
+				if (a == x)
 				{
 					z = y + 1;
 				}
-				else 
+				else
 				{
 					z = '0';
 				}
 				for (b = z; b <= 9; b++)
 				{
-						putchar(x + '0');
-						putchar(y + '0');
-						putchar(' ');
-						putchar(a + '0');
-						putchar(b + '0');
-						if (!(x == 9 && y == 8 && a == 9 && b == 9))
-						{
-						putchar(',');
-						putchar(' ');
-						}
-						}
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(' ');
+					putchar(a + '0');
+					putchar(b + '0');
+					if (!(x == 9 && y == 8 && a == 9 && b == 9))
+					{
+					putchar(',');
+					putchar(' ');
 					}
 				}
 			}
+		}
+	}
 	putchar('\n');
 	return (0);
 }
