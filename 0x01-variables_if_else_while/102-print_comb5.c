@@ -8,29 +8,35 @@ int main(void)
 {
 	int x;
 	int y;
-	int z;
 	int a;
+	int b;
+	int z:
 
 	for (x = 0 ; x <= 9 ; x++)
 	{
-		for (y = 0 ; y <= 8 ; y++)
+		for (y = 0 ; y <= 9 ; y++)
 		{
-			for (z = 0 ; z <= 9; z++)
+			for (x = a ; a <= 9; a++)
 			{
-				for (a = 0; a <= 9; a++)
+				if ( x == a)
 				{
-					if (!(a == 0 && y == 0 && z == 0 && a == 0))
-					{
-					putchar(x + '0');
-					putchar(y + '0');
-					putchar(' ');
-					putchar(z + '0');
-					putchar(a + '0');
-					if (!(x == 9 && y == 8 && z == 9 && a == 9))
-					{
-					putchar(',');
-					putchar(' ');
-					}
+					(z = y + 1) 
+				else 
+				{
+					(a == '0')
+				for (; z <= 9; a++)
+				{
+						putchar(x + '0');
+						putchar(y + '0');
+						putchar(' ');
+						putchar(z + '0');
+						putchar(a + '0');
+						if (!(x == 9 && y == 8 && z == 9 && a == 9))
+						{
+						putchar(',');
+						putchar(' ');
+						}
+						}
 					}
 				}
 			}
