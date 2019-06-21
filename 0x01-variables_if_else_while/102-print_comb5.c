@@ -13,11 +13,11 @@ int main(void)
 	int b;
 	int z;
 
-	for (x = 0 ; x <= 9 ; x++)
+	for (x = '0' ; x <= '9' ; x++)
 	{
-		for (y = 0 ; y <= 9 ; y++)
+		for (y = '0' ; y <= '9' ; y++)
 		{
-			for (a = x ; a <= 9; a++)
+			for (a = x ; a <= '9'; a++)
 			{
 				if (a == x)
 				{
@@ -27,14 +27,14 @@ int main(void)
 				{
 					z = '0';
 				}
-				for (b = z; b <= 9; b++)
+				for (b = z; b <= '9'; b++)
 				{
-					putchar(x + '0');
-					putchar(y + '0');
+					putchar(x);
+					putchar(y);
 					putchar(' ');
-					putchar(a + '0');
-					putchar(b + '0');
-					if (!(x == 9 && y == 8 && a == 9 && b == 9))
+					putchar(a);
+					putchar(b);
+					if (!(x == '9' && y == '8' && a == '9' && b == '9'))
 					{
 					putchar(',');
 					putchar(' ');
