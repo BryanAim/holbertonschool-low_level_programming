@@ -7,24 +7,36 @@ void times_table(void)
 		for (b = 0; b <= 9; b ++)
 		{
 			x = a * b;
-			y = x / 10 + '0';
-			z = x % 10 + '0';
-
-			if (y > 0)
+			if (b > 0)
 			{
-			_putchar(y);
-			_putchar(z);
-			_putchar(',');
+			if ((x / 10) >= 1)
+			{
+			y = x / 10;
+			z = x % 10;
+
 			_putchar(' ');
+			_putchar(y + '0');
+			_putchar(z + '0');
 			}
 			else
 			{
-			_putchar(z);
-			_putchar(',');
+			z = x % 10;
+
 			_putchar(' ');
 			_putchar(' ');
+			_putchar(z + '0');
 			}
+			if (b != 9)
+			{
+				_putchar(',');
+			}
+			}
+			else
+			{
+				_putchar ('0' + z);
+				_putchar(',');
+			}
+		}
 		_putchar('\n');
 		}
-	}
 }
