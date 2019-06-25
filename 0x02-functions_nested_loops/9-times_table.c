@@ -1,4 +1,9 @@
 #include "holberton.h"
+
+/**
+* times_table - prints the sign of a number
+* @n, @b, @x, @y, @z: The character to print
+*/
 void times_table(void)
 {
 	int a, b, x, y, z;
