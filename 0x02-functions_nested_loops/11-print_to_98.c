@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
 * print_to_98 - prints al natural numbers to 98
 * @n: The character to print
@@ -8,23 +8,27 @@
 
 void print_to_98(int n)
 {
-	int a, b;
-	if (n <= 98)
+	int a;
+
+	if (n < 98)
 	{
-	for (a = '0'; a <= '9'; a++)
-	{
-		for (b = '0'; b <= '9'; b++)
+		for (a = n; a < 98; a++)
 		{
-		do
-		{
-		if (a <= '9' && b <= '9')
-		{
-		_putchar(a);
-		_putchar(b);
+		printf("%d, ", a);
 		}
-		}
-	while(a <= '9' && b <= '8');
-		}
+		printf("98");
+		putchar('\n');
 	}
+	if (n > 98)
+	{
+		for (a = n; a > 98; a--)
+		{
+		printf("%d, ", a);
+		}
+		printf("98\n");
+	}
+	if (n == 98)
+	{
+		printf("98\n");
 	}
 }
