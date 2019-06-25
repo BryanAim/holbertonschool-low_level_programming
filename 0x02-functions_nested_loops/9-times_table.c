@@ -13,21 +13,18 @@ void times_table(void)
 		for (b = 0; b <= 9; b++)
 		{
 			x = a * b;
-			if (b >= 0)
-			{
-			if ((x / 10) >= 1)
-			{
 			y = x / 10;
 			z = x % 10;
-
+			if (b > 0)
+			{
+			if (x >= 10)
+			{
 			_putchar(' ');
 			_putchar(y + '0');
 			_putchar(z + '0');
 			}
 			else
 			{
-			z = x % 10;
-
 			_putchar(' ');
 			_putchar(' ');
 			_putchar(z + '0');
@@ -44,5 +41,5 @@ void times_table(void)
 			}
 		}
 		_putchar('\n');
-		}
+	}
 }
