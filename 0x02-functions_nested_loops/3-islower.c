@@ -4,7 +4,8 @@
 * @c: The character to print
 *
 * Return: 1 if lowercase.
-* Return: 0 otherwise.
+* Otherwise 0 is returned..
+*
 */
 int _islower(int c)
 {
@@ -12,7 +13,5 @@ int _islower(int c)
 	return (1);
 
 	else
-	return (0);
-
 	return (0);
 }
