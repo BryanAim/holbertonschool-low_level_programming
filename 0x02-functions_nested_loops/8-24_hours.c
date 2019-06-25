@@ -6,7 +6,8 @@
 */
 void jack_bauer(void)
 {
-	int a, b, c, d, x;
+	int a, b, c, d;
+	int x = 9;
 
 	for (a = 0; a <= 2 ; a++)
 	{
@@ -24,7 +25,7 @@ void jack_bauer(void)
 					_putchar ('\n');
 				}
 			}
-		if (!(a == 2 && c && 5 && d == 9))
+		if (a == 2 || c == 5 || d == 9)
 		{
 			x = 3;
 		}
