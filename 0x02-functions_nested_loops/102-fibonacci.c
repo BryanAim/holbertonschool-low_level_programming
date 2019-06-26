@@ -7,16 +7,16 @@
 */
 int main(void)
 {
-	long double f1 = 0, f2 = 1, i;
+	long double f1 = 1, f2 = 1, i;
 
 	for (i = 1; i <= 50; i++)
 	{
 	printf("%.Lf", f2);
 
-	long double next = f1 + f2;
+	long double f3 = f1 + f2;
 
 	f1 = f2;
-	f2 = next;
+	f2 = f3;
 	if (i != 50)
 	{
 		printf(", ");
