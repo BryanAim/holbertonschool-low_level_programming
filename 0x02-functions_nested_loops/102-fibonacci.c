@@ -9,7 +9,7 @@ int main(void)
 {
 	long double f1 = 1, f2 = 1, i;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 49; i++)
 	{
 	printf("%.Lf", f2);
 
@@ -17,7 +17,7 @@ int main(void)
 
 	f1 = f2;
 	f2 = f3;
-	if (i != 50)
+	if (i != 49)
 	{
 		printf(", ");
 	}
