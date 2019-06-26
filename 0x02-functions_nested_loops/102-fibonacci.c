@@ -7,17 +7,20 @@
 */
 int main(void)
 {
-	long double f1 = 1, f2 = 1, i;
+	long double f1 = 1, f2 = 1, f3;
+	int i;
 
-	for (i = 1; i <= 49; i++)
+	i = 1;
+
+	printf("%.Lf, ", f2);
+	while (i <= 49)
 	{
-	printf("%.Lf", f2);
-
-	long double f3 = f1 + f2;
-
+	f3 = f1 + f2;
+	printf("%.Lf", f3);
+	i++;
 	f1 = f2;
 	f2 = f3;
-	if (i != 49)
+	if (i != 50)
 	{
 		printf(", ");
 	}
