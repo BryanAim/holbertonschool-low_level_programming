@@ -17,7 +17,10 @@ int main(void)
 
 	f1 = f2;
 	f2 = next;
-	printf(", ");
+	if (i != 50)
+	{
+		printf(", ");
+	}
 	}
 	putchar('\n');
 	return (0);
