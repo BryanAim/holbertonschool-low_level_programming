@@ -1,17 +1,18 @@
 #include "holberton.h"
 
 /**
-  * print_line - draws a straight line
+  * print_diagonal - draws a straight line
   * @n: number of lines
   */
 
 void print_diagonal(int n)
 {
-	int l;
+	int l, x;
 
-	for (l = 1; l <= n; l++)
+	for (l = 0; l <= n; l++)
 	{
-		if  (l == n)
+		for (x = 1; x <= l; x++)
+		if  (l == x)
 		{
 		_putchar('\\');
 		_putchar('\n');
@@ -21,5 +22,9 @@ void print_diagonal(int n)
 		_putchar(' ');
 		}
 	}
+		if (n <= 0)
+		{
 		_putchar('\n');
+		}
+
 }
