@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+  * puts2 - one char out of 2
+  * @str: string
+  */
+
 void puts2(char *str)
 {
 	int c;

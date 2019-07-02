@@ -1,19 +1,24 @@
 #include "holberton.h"
 
+/**
+* rev_string - reverse a string
+* @s: character
+*/
+
 void rev_string(char *s)
 {
-        int tam = 0;
+	int tam = 0;
 	char c;
 	int i;
 
-        while (s[tam] != '\0')
+	while (s[tam] != '\0')
 	{
-                tam++;
+		tam++;
 	}
-	for(i = 0; i < (tam/2); i++)
+	for (i = 0; i < (tam / 2); i++)
 	{
 		c = s[i];
 		s[i] = s[tam - i - 1];
-		 s[tam - i - 1] = c;
+		s[tam - i - 1] = c;
 	}
 }
