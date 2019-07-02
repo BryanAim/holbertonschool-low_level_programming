@@ -9,10 +9,20 @@ void puts_half(char *str)
 	{
 		tam++;
 	}
+	if(tam % 2 != 0)
+	{
+	for(i = ((tam + 1 )/ 2); i < tam; i++)
+	{
+	_putchar(str[i]);
+	}
+	}
+	else
+	{
 	for(i = (tam / 2); i < tam; i++)
 	{
 
 	_putchar(str[i]);
+	}
 	}
 	_putchar('\n');
 }
