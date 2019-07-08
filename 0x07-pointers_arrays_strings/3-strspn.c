@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-* *_strchr - locates a character in a string
-* @s: the string pointed to
-* @c: the character to found
+* *_strspn - length prefix
+* @s: the string
+* @accept: the string to compare
 *
 * Return: pointer to dest.
 */
@@ -24,8 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		break;
 		}
-		}
-	i++;
+	}
 	}
 	return (n);
 }
