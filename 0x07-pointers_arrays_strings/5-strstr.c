@@ -1,27 +1,33 @@
 #include "holberton.h"
 
 /**
-* *_strpbrk - locates first occurance in a string
-* @s: the string pointed to
-* @accept: the character to found
+* *_strstr - locates a substring
+* @haystack: the string pointed to
+* @needle: substring
 *
-* Return: pointer to dest.
+* Return: pointer to beginning of substring.
 */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i = 0, j = 0;
 
-	for (i = 0; haystack[i] != '\0'; i++)
-	{
-	for (j = 0; needle[j] != '\0'; j++)
+	while (haystack)
 	{
 		if (haystack[i] == needle[j])
 		{
-		return (haystack + i);
+			j++;
+		return (haystack + i + 1 - j);
 		}
+	else
+	{
+		j = 0;
+		i++;
 	}
-	i++;
+	}
+	if (needle[0] == '\0')
+	{
+		return (haystack);
 	}
 	return (0);
 }
