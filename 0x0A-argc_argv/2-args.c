@@ -1,9 +1,18 @@
 #include "holberton.h"
 #include <stdio.h>
 
-int main (int argc, char* argv[])
+/**
+  * main - prints arguments
+  * @argc: size
+  * @argv: character
+  * Return: always 0.
+  */
+
+
+int main(int argc, char *argv[])
 {
 	int i;
+
 	for (i = 0; i < argc; i++)
 	{
 		printf("%s\n", argv[i]);
