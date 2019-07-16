@@ -17,14 +17,17 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	x = atoi(argv[1]);
 	if (x < 0)
 	{
-		printf("0");
+		printf("0\n");
+		return (0);
 	}
+	else
+	{
 	for (i = 0; i < 5; i++)
 	{
 		if (x >= coin[i])
@@ -43,4 +46,5 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", change);
 	return (0);
+	}
 }
