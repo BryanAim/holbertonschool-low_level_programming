@@ -14,6 +14,21 @@ struct dog
 	char *owner;
 };
 
+
+/**
+ * struct dog_t - Struct type
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
+
+typedef struct dog_t
+{
+	char *name;
+	float age;
+	char *owner;
+} dog_t;
+
 int _putchar(char c);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
