@@ -1,0 +1,20 @@
+#ifndef _dog_h
+#define _dog_h
+/**
+ * struct dog - Struct type
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
+
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
+#endif
