@@ -9,11 +9,14 @@
   */
 int main(int argc, char *argv[])
 {
+	int var;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+	var = atoi(argv[1]);
 	if (argv[1] < 0)
 	{
 		printf("Error\n");
