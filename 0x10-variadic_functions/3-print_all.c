@@ -27,8 +27,11 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(arg, char *);
-			if (arg == NULL)
+			if (str == NULL)
+			{
 				printf("(nil)");
+				break;
+			}
 			printf("%s", str);
 			break;
 		default:
