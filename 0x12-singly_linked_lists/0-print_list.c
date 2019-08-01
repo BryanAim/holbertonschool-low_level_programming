@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -21,7 +19,6 @@ unsigned int i;
 			printf("[%d] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
-
 		h = h->next;
 		i++;
 	}
