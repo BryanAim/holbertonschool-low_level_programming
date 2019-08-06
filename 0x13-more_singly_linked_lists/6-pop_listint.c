@@ -13,17 +13,11 @@ int length = 0;
 
 	if (*head == NULL || head == NULL)
 		return (0);
-	if ((*head)->next == NULL)
-	{
-		length = (*head)->n;
-		free(*head);
-		return (length);
-	}
-	else
+	if (*head)
 	{
 		temp = *head;
+		length = (*head)->n;
 		*head = (*head)->next;
-		length = temp->n;
 		free(temp);
 	}
 	return (length);
