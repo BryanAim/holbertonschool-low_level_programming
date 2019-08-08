@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * binary_to_uint - converts binary to decimal
  * @b: string of binary number
