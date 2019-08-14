@@ -1,5 +1,17 @@
 #include "holberton.h"
 /**
+ * not_close - prints error.
+ * @fd: value to print.
+ */
+
+void not_close(int fd)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
+	exit(100);
+}
+
+
+/**
  * cp - copy a file
  * @from: file to copy
  * @to: file to copy in
@@ -17,10 +29,10 @@ void cp(const char *from, char *to)
 		exit(98);
 	}
 	file_w = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (file_r == -1)
+	if (file_w == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", to);
-		exit(98);
+		dprintf(2, "Error: Can't write to %s\n", to);
+		exit(99);
 	}
 	r = read(file_r, buff, 1024);
 	if (r == -1)
@@ -36,17 +48,16 @@ void cp(const char *from, char *to)
 			exit(99);
 		}
 		r = read(file_r, buff, 1024);
+		if (r == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", from);
+			exit(98);
+		}
 	}
 	if (close(file_w) == -1)
-	{
-	dprintf(2, "Error: Can't close fd %d\n", file_w);
-	exit(100);
-	}
+	not_close(file_r);
 	if (close(file_r) == -1)
-	{
-	dprintf(2, "Error: Can't close fd %d\n", file_r);
-	exit(100);
-	}
+	not_close(file_w);
 }
 /**
  * main - copy a file into another
