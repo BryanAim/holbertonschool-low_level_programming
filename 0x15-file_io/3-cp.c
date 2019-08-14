@@ -8,7 +8,6 @@
 void cp(const char *from, char *to)
 {
 	int file_r, file_w, r;
-	int close1, close2;
 	char buff[1024];
 
 	file_r = open(from, O_RDONLY);
@@ -17,31 +16,33 @@ void cp(const char *from, char *to)
 		dprintf(2, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
+	file_w = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (file_r == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", to);
+		exit(98);
+	}
 	r = read(file_r, buff, 1024);
 	if (r == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
-	file_w = open(to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (file_w == -1)
-	{
-		dprintf(2, "Error: Can't write to %s", from);
-		exit(99);
-	}
 	while (r != 0)
 	{
-		write(file_w, buff, r);
+		if (write(file_w, buff, r) == -1)
+		{
+			dprintf(2, "Error: Can't write to %s", to);
+			exit(99);
+		}
 		r = read(file_r, buff, 1024);
 	}
-	close1 = close(file_w);
-	if (close1 == -1)
+	if (close(file_w) == -1)
 	{
 	dprintf(2, "Error: Can't close fd %d\n", file_w);
 	exit(100);
 	}
-	close2 = close(file_r);
-	if (close2 == -1)
+	if (close(file_r) == -1)
 	{
 	dprintf(2, "Error: Can't close fd %d\n", file_r);
 	exit(100);
