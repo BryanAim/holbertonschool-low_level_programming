@@ -15,12 +15,11 @@ void not_close(int fd)
  * cp - copy a file
  * @from: file to copy
  * @to: file to copy in
- * Return: 0.
  */
 
-int cp(char *from, char *to)
+void cp(char *from, char *to)
 {
-	int file_r, file_w, r;
+	int file_r, file_w, r, w;
 	char buff[1024];
 
 	file_r = open(from, O_RDONLY);
@@ -43,7 +42,8 @@ int cp(char *from, char *to)
 	}
 	while (r != 0)
 	{
-		if (write(file_w, buff, r) == -1)
+		w = write(file_w, buff, r);
+		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", to);
 			exit(99);
@@ -59,7 +59,6 @@ int cp(char *from, char *to)
 	not_close(file_r);
 	if (close(file_r) == -1)
 	not_close(file_w);
-	return (0);
 }
 /**
  * main - copy a file into another
