@@ -66,7 +66,7 @@ void cp(const char *from, char *to)
  *
  * Return: Always 0.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 
 	if (argc != 3)
