@@ -18,7 +18,7 @@ void not_close(int fd)
  * Return: 0.
  */
 
-int cp(const char *from, char *to)
+int cp(char *from, char *to)
 {
 	int file_r, file_w, r;
 	char buff[1024];
