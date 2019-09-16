@@ -1,9 +1,8 @@
-# 0x17. C - Dynamic libraries
+# 0x18. C - Dynamic libraries
 ## About
-An introductory project on:
+This project is about:
 - Dynamic libraries
 - `$LD_LIBRARY_PATH` environment variable
-- Static vs shared libraries
 ## File Descriptions
 ### Mandatory
 **[holberton.h](holberton.h)** - header file containing the prototypes of functions required.
