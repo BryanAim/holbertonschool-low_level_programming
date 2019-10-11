@@ -1,4 +1,12 @@
 #include "hash_tables.h"
+/**
+ * add_hash_table - adds a new node for the hash
+ * @head: pointer to the nodes
+ * @key: the key, can not be an empty string
+ * @value: value associated with the key
+ *
+ * Return: new pointer to node
+ */
 hash_node_t *add_hash_table(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *newnode;
@@ -18,6 +26,14 @@ hash_node_t *add_hash_table(hash_node_t **head, const char *key, const char *val
 	*head = newnode;
 	return (newnode);
 }
+/**
+ * hash_table_set - a function that adds an element to the hash table
+ * @ht: pointer to a hash table
+ * @key: the key, can not be an empty string
+ * @value: value associated with the key
+ *
+ * Return: 1 if it succeded, 0 otherwise
+ */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new = NULL, *aux = NULL;
@@ -31,13 +47,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		new = add_hash_table(&(ht->array[index]), key, value);
 		if (new == NULL)
-			return(0);
+		{
+			return (0);
+		}
 	}
 	else
 	{
 		new = add_hash_table(&(ht->array[index]), key, value);
 		if (new == NULL)
-			return(0);
+		{
+			return (0);
+		}
 	}
 	return (1);
 }
