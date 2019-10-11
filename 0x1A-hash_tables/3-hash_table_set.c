@@ -1,13 +1,13 @@
 #include "hash_tables.h"
 /**
- * add_hash_table - adds a new node for the hash
+ * add_hash - adds a new node for the hash
  * @head: pointer to the nodes
  * @key: the key, can not be an empty string
  * @value: value associated with the key
  *
  * Return: new pointer to node
  */
-hash_node_t *add_hash_table(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_hash(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *newnode;
 
@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	aux = ht->array[index];
 	if (aux != NULL)
 	{
-		new = add_hash_table(&(ht->array[index]), key, value);
+		new = add_hash(&(ht->array[index]), key, value);
 		if (new == NULL)
 		{
 			return (0);
@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		new = add_hash_table(&(ht->array[index]), key, value);
+		new = add_hash(&(ht->array[index]), key, value);
 		if (new == NULL)
 		{
 			return (0);
