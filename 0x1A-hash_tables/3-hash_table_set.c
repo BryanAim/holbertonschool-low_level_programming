@@ -11,19 +11,32 @@ hash_node_t *add_hash(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *newnode;
 
-	newnode = malloc(sizeof(hash_node_t));
-	if (newnode == NULL)
+	if (head == NULL)
 	{
-		free(newnode);
-		return (0);
+		newnode = malloc(sizeof(hash_node_t));
+		if (newnode == NULL)
+		{
+			free(newnode);
+			return (0);
+		}
+		newnode->key = strdup(key);
+		newnode->value = strdup(value);
+		*head = newnode;
 	}
-	newnode->key = strdup(key);
-	newnode->value = strdup(value);
-	if (*head != NULL)
-		newnode->next = NULL;
-	if (*head == NULL)
-		newnode->next = NULL;
-	*head = newnode;
+	else
+	{
+		newnode = malloc(sizeof(hash_node_t));
+		if (newnode == NULL)
+		{
+			free(newnode);
+			return (0);
+		}
+		newnode->key = strdup(key);
+		newnode->value = strdup(value);
+		newnode->next = (*head);
+		*head = newnode;
+	}
+
 	return (newnode);
 }
 /**
