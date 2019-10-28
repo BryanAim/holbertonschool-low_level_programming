@@ -44,16 +44,14 @@ void merge(int *array, int *left, int *right, size_t size)
 void merge_sort(int *array, size_t size)
 {
 	size_t mid = 0, i;
-	int *left = NULL;
-	int *right = NULL;
+	int left[4000];
+	int right[4000];
 
 	if (array == NULL)
 		return;
 
 	if (size < 2)
 		return;
-	left = malloc(sizeof(int) * size);
-	right = malloc(sizeof(int) * size);
 
 	if (left == NULL)
 		return;
@@ -70,6 +68,4 @@ void merge_sort(int *array, size_t size)
 	merge_sort(left, mid);
 	merge_sort(right, size - mid);
 	merge(array, left, right, size);
-	free(left);
-	free(right);
 }
