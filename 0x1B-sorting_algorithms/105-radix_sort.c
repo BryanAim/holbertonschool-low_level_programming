@@ -7,12 +7,13 @@
  **/
 int getmax(int *array, size_t size)
 {
-	size_t max, i;
+	int max;
+	size_t i;
 
 	max = array[0];
 	for (i = 0; i < size; i++)
 	{
-		if ((unsigned int)array[i] > max)
+		if (array[i] > max)
 			max = array[i];
 	}
 	return (max);
@@ -24,10 +25,9 @@ int getmax(int *array, size_t size)
  * @size: size of the array
  * @signum: less significal number
  **/
-void countsort(int *array, size_t size, int signum)
+void countsort(int *array, int size, int signum)
 {
-	unsigned int *count, *output;
-	int i, max;
+	int *count, *output, i, max;
 
 	max = getmax(array, size);
 	count = malloc((max + 1) * sizeof(size_t));
