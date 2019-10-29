@@ -22,12 +22,12 @@ int getmax(int *array, size_t size)
  * countsort - counting sort
  * @array: pointer to array
  * @size: size of the array
- * @exp: exponential
+ * @signum: less significal number
  **/
-void countsort(int *array, size_t size, int exp)
+void countsort(int *array, size_t size, int signum)
 {
 	unsigned int *count, *output;
-	size_t i, max;
+	int i, max;
 
 	max = getmax(array, size);
 	count = malloc((max + 1) * sizeof(size_t));
@@ -44,16 +44,16 @@ void countsort(int *array, size_t size, int exp)
 	}
 	for (i = 0; i <= max; ++i)
 		count[i] = 0;
-	for (i = 0; i < size; i++)
-		count[(array[i] / exp) % 10] += 1;
-	for (i = 1; i <= 10; i++)
+	for (i = 0; i < (int)size; i++)
+		count[(array[i] / signum) % 10] += 1;
+	for (i = 1; i < 10; i++)
 		count[i] += count[i - 1];
-	for (i = 0; i < size; i++)
+	for (i = size - 1; i >= 0; i--)
 	{
-		output[count[(array[i] / exp) % 10] - 1] = array[i];
-		--count[(array[i] / exp) % 10];
+		output[count[(array[i] / signum) % 10] - 1] = array[i];
+		count[(array[i] / signum) % 10]--;
 	}
-	for (i = 0; i < size; i++)
+	for (i = 0; i < (int)size; i++)
 		array[i] = output[i];
 	free(count);
 	free(output);
@@ -66,13 +66,13 @@ void countsort(int *array, size_t size, int exp)
 void radix_sort(int *array, size_t size)
 {
 	int max = getmax(array, size);
-	int exp;
+	int signum;
 
 	if (!array || size < 2)
 		return;
-	for (exp = 1; max / exp > 0; exp *= 10)
+	for (signum = 1; max / signum > 0; signum *= 10)
 	{
-		countsort(array, size, exp);
+		countsort(array, size, signum);
 		print_array(array, size);
 	}
 }
