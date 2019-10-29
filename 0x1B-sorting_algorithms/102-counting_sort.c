@@ -9,9 +9,9 @@ void counting_sort(int *array, size_t size)
 	unsigned int *count, *output;
 	size_t i, max;
 
-	max = array[0];
 	if (!array || size < 2)
 		return;
+	max = array[0];
 	for (i = 0; i < size; i++)
 	{
 		if ((unsigned int)array[i] > max)
