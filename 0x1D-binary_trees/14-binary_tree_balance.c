@@ -3,7 +3,7 @@
 /**
   *binary_tree_balance - measures the balance factor of a binary tree
   *@tree: is a pointer to the root of the tree
-  *Return: difference in height.
+  *Return: difference in balance.
   */
 
 int binary_tree_balance(const binary_tree_t *tree)
