@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include "9-binary_tree_height.c"
 
 /**
   *binary_tree_balance - measures the balance factor of a binary tree
@@ -8,17 +9,15 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int left_height;
-	int right_height;
+	int left_height = 0;
+	int right_height = 0;
 
 	if (tree == NULL)
 		return (0);
 
-	left_height = binary_tree_balance(tree->left);
-	right_height = binary_tree_balance(tree->right);
 	if (tree->left)
-		left_height = (left_height + 1);
+		left_height = (binary_tree_height(tree->left) + 1);
 	if (tree->right)
-		right_height = (right_height + 1);
+		right_height = (binary_tree_height(tree->right) + 1);
 	return (left_height - right_height);
 }
