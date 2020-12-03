@@ -1,5 +1,8 @@
 # Holberton School - Low Level Programming
 This proyect is about low level programming in C.
+## Prerequisites
+* Ubuntu 14.04 LTS
+* gcc 4.8
 ## Content
 | Project | Description |
 |---------|-------------|
@@ -32,7 +35,3 @@ This proyect is about low level programming in C.
 | [`0x1C-makefiles`](./0x1C-makefiles) | How to implement a makefile with rules |
 | [`0x1D-binary_trees`](./0x1D-binary_trees) | How to implement binary trees with pointers and nodes |
 | [`0x1E-search_algorithms`](./0x1E-search_algorithms) | How to implement linear and binary search algorithms |
-
-## Prerequisites
-* Ubuntu 14.04 LTS
-* gcc 4.8
