@@ -160,7 +160,7 @@ What is the result of `89 % 7`?
 <details>
 <summary>View Contents</summary>
   
-### [0. _putchar](0-holberton.c)
+### 0. _putchar
 
 Write a program that prints `Holberton`, followed by a new line.
 
@@ -174,7 +174,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`0-holberton.c`](0-holberton.c)
 
-### [1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game](1-alphabet.c)
+### 1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
 
 Write a function that prints the alphabet, in lowercase, followed by a new line.
 
@@ -202,7 +202,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`1-alphabet.c`](1-alphabet.c)
 
-### [2. 10 x alphabet](2-print_alphabet_x10.c)
+### 2. 10 x alphabet
 
 Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
 
@@ -239,7 +239,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`2-print_alphabet_x10.c`](2-print_alphabet_x10.c)
 
-### [3. islower](3-islower.c)
+### 3. islower
 
 Write a function that checks for lowercase character.
 
@@ -277,7 +277,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`3-islower.c`](3-islower.c)
 
-### [4. isalpha](4-isalpha.c)
+### 4. isalpha
 
 Write a function that checks for alphabetic character.
 
@@ -317,7 +317,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`4-isalpha.c`](4-isalpha.c)
 
-### [5. Sign](5-sign.c)
+### 5. Sign
 
 Write a function that prints the sign of a number.
 
@@ -371,7 +371,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`5-sign.c`](5-sign.c)
 
-### [6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you](6-abs.c)
+### 6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you
 
 Write a function that computes the absolute value of an integer.
 
@@ -412,7 +412,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`6-abs.c`](6-abs.c)
 
-### [7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important](7-print_last_digit.c)
+### 7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
 
 Write a function that prints the last digit of a number.
 
@@ -446,7 +446,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`7-print_last_digit.c`](7-print_last_digit.c)
 
-### [8. I'm federal agent Jack Bauer, and today is the longest day of my life](8-24_hours.c)
+### 8. I'm federal agent Jack Bauer, and today is the longest day of my life
 
 Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
 
@@ -496,7 +496,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`8-24_hours.c`](8-24_hours.c)
 
-### [9. Learn your times table](9-times_table.c)
+### 9. Learn your times table
 
 Write a function that prints the 9 times table, starting with 0.
 
@@ -544,7 +544,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`9-times_table.c`](9-times_table.c)
 
-### [10. a + b](10-add.c)
+### 10. a + b
 
 Write a function that adds two integers and returns the result.
 
@@ -575,7 +575,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`10-add.c`](10-add.c)
 
-### [11. Holberton School, 98 Battery Street, the OG](11-print_to_98.c)
+### 11. Holberton School, 98 Battery Street, the OG
 
 Write a function that prints all natural numbers from `n` to `98`, followed by a new line.
 
@@ -615,7 +615,7 @@ julien@ubuntu:~/0x02$
 
 **File: [`11-print_to_98.c`](11-print_to_98.c)
 
-### [12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself #advanced](100-times_table.c)
+### 12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself (advanced)
 
 Write a function that prints the `n` times table, starting with 0.
 
@@ -702,7 +702,7 @@ julien@ubuntu:~/0x02$
 
 **File:** [`100-times_table.c`](100-times_table.c)
 
-### [13. Nature made the natural numbers; All else is the work of women #advanced](101-natural.c)
+### 13. Nature made the natural numbers; All else is the work of women (advanced)
 
 If we list all the natural numbers below `10` that are multiples of `3` or `5`, we get `3`, `5`, `6` and `9`. The sum of these multiples is `23`. Write a program that computes and prints the sum of all the multiples of `3` or `5` below `1024` (excluded), followed by a new line.
 
@@ -710,7 +710,7 @@ If we list all the natural numbers below `10` that are multiples of `3` or `5`, 
 
 **File:** [`101-natural.c`](101-natural.c)
 
-### 14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A #advanced
+### 14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A (advanced)
 
 Write a program that prints the first 50 Fibonacci numbers, starting with `1` and `2`, followed by a new line.
 
@@ -719,19 +719,15 @@ Write a program that prints the first 50 Fibonacci numbers, starting with `1` an
 
 **File:** [`102-fibonacci.c`](102-fibonacci.c)
 
-### 15. Even Liber Abbaci #advanced
+### 15. Even Liber Abbaci (advanced)
 
 Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with `1` and `2`, the first 10 terms will be: `1, 2, 3, 5, 8, 13, 21, 34, 55, 89`. By considering the terms in the Fibonacci sequence whose values do not exceed 4,000,000, write a program that finds and prints the sum of the even-valued terms, followed by a new line.
 
 - You are allowed to use the standard library
 
-**Repo:**
+**File:** [`103-fibonacci.c`](103-fibonacci.c)
 
-* GitHub repository: `holbertonschool-low_level_programming`
-* Directory: `0x02-functions_nested_loops`
-* File: `103-fibonacci.c`
-
-### 16. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A+ #advanced
+### 16. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A+ (advanced)
 
 Write a program that finds and prints the first 98 Fibonacci numbers, starting with `1` and `2`, followed by a new line.
 
@@ -741,11 +737,7 @@ Write a program that finds and prints the first 98 Fibonacci numbers, starting w
 - You are not allowed to use `long long`, `malloc`, pointers, arrays/tables, or structures
 - You are not allowed to hard code any Fibonacci number (except for `1` and `2`)
 
-**Repo:**
-
-* GitHub repository: `holbertonschool-low_level_programming`
-* Directory: `0x02-functions_nested_loops`
-* File: `104-fibonacci.c`
+**File:** [`104-fibonacci.c`](104-fibonacci.c)
 
 </details>
 
