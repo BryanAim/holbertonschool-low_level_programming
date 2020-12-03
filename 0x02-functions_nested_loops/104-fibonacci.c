@@ -7,18 +7,30 @@
 */
 int main(void)
 {
-	long double f1 = 0, f2 = 1, i;
+	long n1 = 1;
+	long n2 = 1;
 
-	for (i = 1; i <= 50; i++)
+	int i;
+	long sum;
+	long  aux = 0;
+
+	for (i = 0; i < 50; i++)
 	{
-	printf("%.Lf", f2);
-
-	long double next = f1 + f2;
-
-	f1 = f2;
-	f2 = next;
-	printf(", ");
+		if (!(i == 0))
+		{
+			sum = n1 + n2;
+			n1 = n2;
+			n2 = sum;
+			if (sum < 4000000)
+			{
+				if ((sum % 2) == 0)
+				{
+					aux = aux + sum;
+				}
+			}
+		}
 	}
-	putchar('\n');
+	printf("%ld", aux);
+	printf("\n");
 	return (0);
 }
